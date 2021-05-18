@@ -2,7 +2,7 @@ apiVersion: cstor.openebs.io/v1
 kind: CStorVolumeReplica
 metadata:
   annotations:
-    cstorpoolinstance.openebs.io/hostname: ip-10-0-6-143.ec2.internal
+    cstorpoolinstance.openebs.io/hostname: minikube-1
   creationTimestamp: "2020-10-27T10:57:40Z"
   finalizers:
   - cstorvolumereplica.openebs.io/finalizer

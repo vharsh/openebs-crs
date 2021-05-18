@@ -19,7 +19,7 @@ metadata:
   selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorvolumeconfigs/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
   uid: 76d807a1-b63c-4e75-aafe-f32d6cc2af60
 publish:
-  nodeId: ip-10-0-6-143.ec2.internal
+  nodeId: minikube-1
 spec:
   capacity:
     storage: 20Gi

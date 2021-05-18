@@ -28,9 +28,9 @@ spec:
   - blockDevices:
     - blockDeviceName: blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
       devLink: /dev/disk/by-id/nvme-nvme.1d0f-766f6c3034623934313261326133396538373631-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001
-  hostName: ip-10-0-6-143.ec2.internal
+  hostName: minikube-1
   nodeSelector:
-    kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+    kubernetes.io/hostname: minikube-1
   poolConfig:
     compression: "off"
     dataRaidGroupType: stripe

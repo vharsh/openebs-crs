@@ -2,7 +2,7 @@ apiVersion: cstor.openebs.io/v1
 kind: CStorPoolCluster
 metadata:
   annotations:
-    31d93994-4856-436a-a58f-2c015becda51/gctl-last-applied: '{"apiVersion":"cstor.openebs.io/v1","kind":"CStorPoolCluster","metadata":{"annotations":{"dao.mayadata.io/cstorclusterconfig-localdisk":"true","dao.mayadata.io/cstorclusterconfig-uid":"31d93994-4856-436a-a58f-2c015becda51"},"name":"default-cstor-disk","namespace":"openebs"},"spec":{"pools":[{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d"},{"blockDeviceName":"blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58"}]}],"nodeSelector":{"kubernetes.io/hostname":"ip-10-0-6-143.ec2.internal"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}},{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-c21bc3b79a98c7e8508f47558cc94f36"}]}],"nodeSelector":{"kubernetes.io/hostname":"ip-10-0-8-190.ec2.internal"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}}]}}'
+    31d93994-4856-436a-a58f-2c015becda51/gctl-last-applied: '{"apiVersion":"cstor.openebs.io/v1","kind":"CStorPoolCluster","metadata":{"annotations":{"dao.mayadata.io/cstorclusterconfig-localdisk":"true","dao.mayadata.io/cstorclusterconfig-uid":"31d93994-4856-436a-a58f-2c015becda51"},"name":"default-cstor-disk","namespace":"openebs"},"spec":{"pools":[{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d"},{"blockDeviceName":"blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58"}]}],"nodeSelector":{"kubernetes.io/hostname":"minikube-1"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}},{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-c21bc3b79a98c7e8508f47558cc94f36"}]}],"nodeSelector":{"kubernetes.io/hostname":"minikube-2"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}}]}}'
     31d93994-4856-436a-a58f-2c015becda51/updated-due-to-watch: dao.mayadata.io-v1alpha1-CStorClusterConfig-openebs-default-cstor-disk
     dao.mayadata.io/cstorclusterconfig-localdisk: "true"
     dao.mayadata.io/cstorclusterconfig-uid: 31d93994-4856-436a-a58f-2c015becda51
@@ -23,7 +23,7 @@ spec:
       - blockDeviceName: blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d
       - blockDeviceName: blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
     nodeSelector:
-      kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+      kubernetes.io/hostname: minikube-1
     poolConfig:
       compression: "off"
       dataRaidGroupType: stripe
@@ -32,7 +32,7 @@ spec:
     - blockDevices:
       - blockDeviceName: blockdevice-c21bc3b79a98c7e8508f47558cc94f36
     nodeSelector:
-      kubernetes.io/hostname: ip-10-0-8-190.ec2.internal
+      kubernetes.io/hostname: minikube-2
     poolConfig:
       compression: "off"
       dataRaidGroupType: stripe

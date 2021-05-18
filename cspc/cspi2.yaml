@@ -7,7 +7,7 @@ metadata:
   - openebs.io/pool-protection
   generation: 51257
   labels:
-    kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+    kubernetes.io/hostname: minikube-1
     openebs.io/cas-type: cstor
     openebs.io/cstor-pool-cluster: default-cstor-disk
     openebs.io/version: 2.1.0-ee
@@ -28,9 +28,9 @@ spec:
   - blockDevices:
     - blockDeviceName: blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d
       devLink: /dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_vol08a9d69fa93403a81
-  hostName: ip-10-0-6-143.ec2.internal
+  hostName: minikube-1
   nodeSelector:
-    kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+    kubernetes.io/hostname: minikube-1
   poolConfig:
     compression: "off"
     dataRaidGroupType: stripe
