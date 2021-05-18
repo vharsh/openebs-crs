@@ -1,0 +1,60 @@
+apiVersion: openebs.io/v1alpha1
+kind: BlockDevice
+metadata:
+  annotations:
+    internal.openebs.io/partition-uuid: 870bcdb3-3f39-2842-9d3e-81bc087abc73
+    internal.openebs.io/uuid-scheme: legacy
+  creationTimestamp: "2020-06-09T11:38:10Z"
+  finalizers:
+  - openebs.io/bd-protection
+  generation: 36
+  labels:
+    cstorpooloperation.director.io/uuid: 3d17d1ac-f173-4a29-b83d-0fb8f62da548
+    kubernetes.io/hostname: minikube-1
+    ndm.io/blockdevice-type: blockdevice
+    ndm.io/managed: "true"
+  name: blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
+  namespace: openebs
+  resourceVersion: "196853953"
+  selfLink: /apis/openebs.io/v1alpha1/namespaces/openebs/blockdevices/blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
+  uid: 64c440e3-d31c-4440-9183-944355ed7152
+spec:
+  capacity:
+    logicalSectorSize: 512
+    physicalSectorSize: 512
+    storage: 107374182400
+  claimRef:
+    apiVersion: openebs.io/v1alpha1
+    kind: BlockDeviceClaim
+    name: bdc-cstor-64c440e3-d31c-4440-9183-944355ed7152
+    namespace: openebs
+    resourceVersion: "19917580"
+    uid: bf0db6d1-5369-4ac6-8710-c59873dd03d6
+  details:
+    compliance: ""
+    deviceType: disk
+    driveType: SSD
+    firmwareRevision: ""
+    hardwareSectorSize: 512
+    logicalBlockSize: 512
+    model: ""
+    physicalBlockSize: 512
+    serial: vol04b9412a2a39e8761
+    vendor: ""
+  devlinks:
+  - kind: by-id
+    links:
+    - /dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_vol04b9412a2a39e8761
+    - /dev/disk/by-id/nvme-nvme.1d0f-766f6c3034623934313261326133396538373631-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001
+    - /dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_vol04b9412a2a39e8761-ns-1
+  - kind: by-path
+    links:
+    - /dev/disk/by-path/pci-0000:00:16.0-nvme-1
+  filesystem: {}
+  nodeAttributes:
+    nodeName: minikube-1
+  partitioned: "No"
+  path: /dev/nvme10n1
+status:
+  claimState: Claimed
+  state: Active
