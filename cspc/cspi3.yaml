@@ -1,0 +1,55 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolInstance
+metadata:
+  creationTimestamp: "2020-06-09T16:03:25Z"
+  finalizers:
+  - cstorpoolcluster.openebs.io/finalizer
+  - openebs.io/pool-protection
+  generation: 43127
+  labels:
+    kubernetes.io/hostname: ip-10-0-6-94.ec2.internal
+    openebs.io/cas-type: cstor
+    openebs.io/cstor-pool-cluster: default-cstor-disk
+    openebs.io/version: 2.0.0-ee
+  name: default-cstor-disk-rhwj
+  namespace: openebs
+  ownerReferences:
+  - apiVersion: cstor.openebs.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: CStorPoolCluster
+    name: default-cstor-disk
+    uid: ed126cc8-9473-4aa6-9e69-4d2ae8454a41
+  resourceVersion: "196854948"
+  selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorpoolinstances/default-cstor-disk-rhwj
+  uid: b52adfe7-6695-4fb2-81db-2f755204328d
+spec:
+  dataRaidGroups:
+  - blockDevices:
+    - blockDeviceName: blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
+      devLink: /dev/disk/by-id/nvme-nvme.1d0f-766f6c3034623934313261326133396538373631-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001
+  hostName: ip-10-0-6-143.ec2.internal
+  nodeSelector:
+    kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+  poolConfig:
+    compression: "off"
+    dataRaidGroupType: stripe
+    priorityClassName: ""
+status:
+  capacity:
+    free: 78300M
+    total: 96400M
+    used: 18100M
+    zfs:
+      logicalUsed: 51400M
+  healthyReplicas: 4
+  phase: OFFLINE
+  provisionedReplicas: 7
+  readOnly: false
+versionDetails:
+  desired: 2.0.0-ee
+  status:
+    current: 2.0.0-ee
+    dependentsUpgraded: true
+    lastUpdateTime: "2020-09-23T17:23:42Z"
+    state: Reconciled

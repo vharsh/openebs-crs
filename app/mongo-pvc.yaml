@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"labels":{"app":"mongo"},"name":"mongo","namespace":"default"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"20Gi"}},"storageClassName":"common-storageclass"}}
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: cstor.csi.openebs.io
+  creationTimestamp: "2020-10-27T10:57:39Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: mongo
+  name: mongo
+  namespace: default
+  resourceVersion: "104168158"
+  selfLink: /api/v1/namespaces/default/persistentvolumeclaims/mongo
+  uid: b84f60ae-3f26-4110-a85d-bce7ec00dacc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: common-storageclass
+  volumeMode: Filesystem
+  volumeName: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 20Gi
+  phase: Bound

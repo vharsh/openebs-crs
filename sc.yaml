@@ -1,0 +1,19 @@
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"allowVolumeExpansion":true,"apiVersion":"storage.k8s.io/v1","kind":"StorageClass","metadata":{"annotations":{},"name":"common-storageclass"},"parameters":{"cas-type":"cstor","cstorPoolCluster":"default-cstor-disk","replicaCount":"3"},"provisioner":"cstor.csi.openebs.io","reclaimPolicy":"Delete","volumeBindingMode":"Immediate"}
+  creationTimestamp: "2020-06-07T16:01:03Z"
+  name: common-storageclass
+  resourceVersion: "18947362"
+  selfLink: /apis/storage.k8s.io/v1/storageclasses/common-storageclass
+  uid: 47193af1-e0c1-4678-8f1a-4096aa27c109
+parameters:
+  cas-type: cstor
+  cstorPoolCluster: default-cstor-disk
+  replicaCount: "3"
+provisioner: cstor.csi.openebs.io
+reclaimPolicy: Delete
+volumeBindingMode: Immediate

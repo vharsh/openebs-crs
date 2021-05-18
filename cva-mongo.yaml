@@ -1,0 +1,35 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorVolumeAttachment
+metadata:
+  creationTimestamp: "2021-03-18T10:11:06Z"
+  finalizers:
+  - ip-10-0-6-143.ec2.internal
+  generation: 3
+  labels:
+    Volname: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    nodeID: ip-10-0-6-143.ec2.internal
+  name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc-ip-10-0-6-143.ec2.internal
+  namespace: openebs
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: ip-10-0-6-143.ec2.internal
+    uid: 8779dd63-8291-4b91-b3f0-ece72e553ea6
+  resourceVersion: "196964181"
+  selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorvolumeattachments/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc-ip-10-0-6-143.ec2.internal
+  uid: 4875d73c-be65-4f72-9f32-4fdbec5154db
+spec:
+  iscsi:
+    iqn: iqn.2016-09.com.openebs.cstor:pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    iscsiInterface: default
+    lun: "0"
+    targetPortal: 172.20.96.58:3260
+  volume:
+    accessType: mount
+    devicePath: /dev/disk/by-path/ip-172.20.96.58:3260-iscsi-iqn.2016-09.com.openebs.cstor:pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc-lun-0
+    fsType: ext4
+    name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    ownerNodeID: ip-10-0-6-143.ec2.internal
+    stagingTargetPath: /var/lib/kubelet/plugins/kubernetes.io/csi/pv/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc/globalmount
+    targetPath: /var/lib/kubelet/pods/abc01471-55c7-4941-b133-aa582a9c4788/volumes/kubernetes.io~csi/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc/mount
+status: ""

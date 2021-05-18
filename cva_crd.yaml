@@ -1,0 +1,59 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    92cee688-a2c9-4e2d-b7a4-426f3449361e/gctl-last-applied: '{"apiVersion":"apiextensions.k8s.io/v1beta1","kind":"CustomResourceDefinition","metadata":{"annotations":{"openebs-upgrade.dao.mayadata.io/openebs-uid":"92cee688-a2c9-4e2d-b7a4-426f3449361e"},"labels":{"openebs-upgrade.dao.mayadata.io/component-name":"cstorvolumeattachments.cstor.openebs.io","openebs-upgrade.dao.mayadata.io/managed":"true"},"name":"cstorvolumeattachments.cstor.openebs.io"},"spec":{"group":"cstor.openebs.io","names":{"kind":"CStorVolumeAttachment","plural":"cstorvolumeattachments","shortNames":["cstorvolumeattachment","cva"],"singular":"cstorvolumeattachment"},"scope":"Namespaced","version":"v1"}}'
+    92cee688-a2c9-4e2d-b7a4-426f3449361e/updated-due-to-watch: dao.mayadata.io-v1alpha1-OpenEBS-openebs-my-openebs-config
+    ed1525eb-5bd6-4bc8-b72d-d0144553d908/gctl-last-applied: '{"apiVersion":"apiextensions.k8s.io/v1beta1","kind":"CustomResourceDefinition","metadata":{"annotations":{"openebs-upgrade.dao.mayadata.io/openebs-uid":"ed1525eb-5bd6-4bc8-b72d-d0144553d908"},"labels":{"openebs-upgrade.dao.mayadata.io/component-name":"cstorvolumeattachments.cstor.openebs.io","openebs-upgrade.dao.mayadata.io/managed":"true"},"name":"cstorvolumeattachments.cstor.openebs.io"},"spec":{"group":"cstor.openebs.io","names":{"kind":"CStorVolumeAttachment","plural":"cstorvolumeattachments","shortNames":["cstorvolumeattachment","cva"],"singular":"cstorvolumeattachment"},"scope":"Namespaced","version":"v1"}}'
+    metac.openebs.io/created-due-to-watch: ed1525eb-5bd6-4bc8-b72d-d0144553d908
+    openebs-upgrade.dao.mayadata.io/openebs-uid: 92cee688-a2c9-4e2d-b7a4-426f3449361e
+  creationTimestamp: "2020-06-09T11:37:54Z"
+  generation: 1
+  labels:
+    openebs-upgrade.dao.mayadata.io/component-name: cstorvolumeattachments.cstor.openebs.io
+    openebs-upgrade.dao.mayadata.io/managed: "true"
+  name: cstorvolumeattachments.cstor.openebs.io
+  resourceVersion: "82790474"
+  selfLink: /apis/apiextensions.k8s.io/v1beta1/customresourcedefinitions/cstorvolumeattachments.cstor.openebs.io
+  uid: d8c31d6f-f232-44e2-b0bb-e3f14d7c8be6
+spec:
+  conversion:
+    strategy: None
+  group: cstor.openebs.io
+  names:
+    kind: CStorVolumeAttachment
+    listKind: CStorVolumeAttachmentList
+    plural: cstorvolumeattachments
+    shortNames:
+    - cstorvolumeattachment
+    - cva
+    singular: cstorvolumeattachment
+  preserveUnknownFields: true
+  scope: Namespaced
+  version: v1
+  versions:
+  - name: v1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: CStorVolumeAttachment
+    listKind: CStorVolumeAttachmentList
+    plural: cstorvolumeattachments
+    shortNames:
+    - cstorvolumeattachment
+    - cva
+    singular: cstorvolumeattachment
+  conditions:
+  - lastTransitionTime: "2020-06-09T11:37:54Z"
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: null
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1

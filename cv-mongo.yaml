@@ -1,0 +1,58 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorVolume
+metadata:
+  creationTimestamp: "2020-10-27T10:57:40Z"
+  generation: 583908
+  labels:
+    openebs.io/persistent-volume: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    openebs.io/persistent-volume-claim: mongo
+    openebs.io/version: 2.0.0-ee
+  name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+  namespace: openebs
+spec:
+  capacity: 20Gi
+  consistencyFactor: 2
+  desiredReplicationFactor: 3
+  iqn: iqn.2016-09.com.openebs.cstor:pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+  replicaDetails:
+    knownReplicas:
+      97DB9F2861699D716E0E0D840A7FC0AC: "15257544689684481438"
+      BA3C3F0F6C6753645E32872458D7341E: "13393897283503720070"
+      F4B658C06FC882250B84F34CFF28A03C: "4737595897912317389"
+  replicationFactor: 3
+  targetIP: 172.20.96.58
+  targetPort: "3260"
+  targetPortal: 172.20.96.58:3260
+status:
+  capacity: 20Gi
+  lastTransitionTime: "2021-05-07T06:42:23Z"
+  lastUpdateTime: "2021-05-18T04:50:59Z"
+  phase: Healthy
+  replicaDetails:
+    knownReplicas:
+      97DB9F2861699D716E0E0D840A7FC0AC: "15257544689684481438"
+      BA3C3F0F6C6753645E32872458D7341E: "13393897283503720070"
+      F4B658C06FC882250B84F34CFF28A03C: "4737595897912317389"
+  replicaStatuses:
+  - checkpointedIOSeq: "8555601"
+    inflightRead: "0"
+    inflightSync: "0"
+    inflightWrite: "0"
+    mode: Healthy
+    quorum: "1"
+    replicaId: "15257544689684481438"
+    upTime: 5251179
+  - checkpointedIOSeq: "12207567"
+    inflightRead: "0"
+    inflightSync: "0"
+    inflightWrite: "0"
+    mode: Healthy
+    quorum: "1"
+    replicaId: "4737595897912317389"
+    upTime: 943749
+versionDetails:
+  desired: 2.0.0-ee
+  status:
+    current: 2.0.0-ee
+    dependentsUpgraded: true
+    lastUpdateTime: null

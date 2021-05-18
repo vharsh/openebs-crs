@@ -1,0 +1,44 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorVolumeReplica
+metadata:
+  annotations:
+    cstorpoolinstance.openebs.io/hostname: ip-10-0-6-94.ec2.internal
+  creationTimestamp: "2020-10-27T10:57:40Z"
+  finalizers:
+  - cstorvolumereplica.openebs.io/finalizer
+  generation: 408381
+  labels:
+    cstorpoolinstance.openebs.io/name: default-cstor-disk-rhwj
+    cstorpoolinstance.openebs.io/uid: b52adfe7-6695-4fb2-81db-2f755204328d
+    cstorvolume.openebs.io/name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    openebs.io/persistent-volume: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    openebs.io/version: 2.0.0-ee
+  name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc-default-cstor-disk-rhwj
+  namespace: openebs
+  ownerReferences:
+  - apiVersion: cstor.openebs.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: CStorVolume
+    name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    uid: 7ed1af76-6ef2-459e-bea7-118342f74f94
+  resourceVersion: "196854490"
+  selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorvolumereplicas/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc-default-cstor-disk-rhwj
+  uid: 2b0b186e-42ec-467d-840a-2e3a3e8a4fbb
+spec:
+  capacity: 20G
+  replicaid: BA3C3F0F6C6753645E32872458D7341E
+  targetIP: 172.20.96.58
+status:
+  capacity:
+    total: 715M
+    used: 872M
+  lastTransitionTime: "2021-03-18T06:09:06Z"
+  lastUpdateTime: "2021-03-18T06:09:36Z"
+  phase: Offline
+versionDetails:
+  desired: 2.0.0-ee
+  status:
+    current: 2.0.0-ee
+    dependentsUpgraded: true
+    lastUpdateTime: null

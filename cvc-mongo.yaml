@@ -1,0 +1,75 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorVolumeConfig
+metadata:
+  annotations:
+    openebs.io/persistent-volume-claim: mongo
+    openebs.io/volume-policy: ""
+    openebs.io/volumeID: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+  creationTimestamp: "2020-10-27T10:57:40Z"
+  finalizers:
+  - cvc.openebs.io/finalizer
+  generation: 6
+  labels:
+    cstor.openebs.io/template-hash: "3336402806"
+    openebs.io/cstor-pool-cluster: default-cstor-disk
+    openebs.io/pod-disruption-budget: default-cstor-diskjt9n2
+  name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+  namespace: openebs
+  resourceVersion: "196963886"
+  selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorvolumeconfigs/pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+  uid: 76d807a1-b63c-4e75-aafe-f32d6cc2af60
+publish:
+  nodeId: ip-10-0-6-143.ec2.internal
+spec:
+  capacity:
+    storage: 20Gi
+  cstorVolumeRef:
+    apiVersion: cstor.openebs.io/v1
+    kind: CStorVolume
+    name: pvc-b84f60ae-3f26-4110-a85d-bce7ec00dacc
+    namespace: openebs
+    resourceVersion: "104168162"
+    uid: 7ed1af76-6ef2-459e-bea7-118342f74f94
+  policy:
+    provision:
+      replicaAffinity: false
+    replica: {}
+    replicaPoolInfo:
+    - poolName: default-cstor-disk-dcrm
+    - poolName: default-cstor-disk-fp6v
+    - poolName: default-cstor-disk-rhwj
+    target:
+      auxResources:
+        limits:
+          cpu: "0"
+          memory: "0"
+        requests:
+          cpu: "0"
+          memory: "0"
+      luWorkers: 6
+      queueDepth: "32"
+      resources:
+        limits:
+          cpu: "0"
+          memory: "0"
+        requests:
+          cpu: "0"
+          memory: "0"
+  provision:
+    capacity:
+      storage: 20Gi
+    replicaCount: 3
+status:
+  capacity:
+    storage: 20Gi
+  phase: Bound
+  poolInfo:
+  - default-cstor-disk-dcrm
+  - default-cstor-disk-fp6v
+  - default-cstor-disk-rhwj
+versionDetails:
+  desired: 2.0.0-ee
+  status:
+    current: 2.0.0-ee
+    dependentsUpgraded: true
+    lastUpdateTime: null

@@ -1,0 +1,57 @@
+apiVersion: cstor.openebs.io/v1
+kind: CStorPoolCluster
+metadata:
+  annotations:
+    31d93994-4856-436a-a58f-2c015becda51/gctl-last-applied: '{"apiVersion":"cstor.openebs.io/v1","kind":"CStorPoolCluster","metadata":{"annotations":{"dao.mayadata.io/cstorclusterconfig-localdisk":"true","dao.mayadata.io/cstorclusterconfig-uid":"31d93994-4856-436a-a58f-2c015becda51"},"name":"default-cstor-disk","namespace":"openebs"},"spec":{"pools":[{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d"},{"blockDeviceName":"blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58"}]}],"nodeSelector":{"kubernetes.io/hostname":"ip-10-0-6-143.ec2.internal"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}},{"dataRaidGroups":[{"blockDevices":[{"blockDeviceName":"blockdevice-c21bc3b79a98c7e8508f47558cc94f36"}]}],"nodeSelector":{"kubernetes.io/hostname":"ip-10-0-8-190.ec2.internal"},"poolConfig":{"compression":"off","dataRaidGroupType":"stripe","thickProvision":false}}]}}'
+    31d93994-4856-436a-a58f-2c015becda51/updated-due-to-watch: dao.mayadata.io-v1alpha1-CStorClusterConfig-openebs-default-cstor-disk
+    dao.mayadata.io/cstorclusterconfig-localdisk: "true"
+    dao.mayadata.io/cstorclusterconfig-uid: 31d93994-4856-436a-a58f-2c015becda51
+    metac.openebs.io/created-due-to-watch: 31d93994-4856-436a-a58f-2c015becda51
+  creationTimestamp: "2020-06-09T16:03:23Z"
+  finalizers:
+  - cstorpoolcluster.openebs.io/finalizer
+  generation: 102720
+  name: default-cstor-disk
+  namespace: openebs
+  resourceVersion: "196855347"
+  selfLink: /apis/cstor.openebs.io/v1/namespaces/openebs/cstorpoolclusters/default-cstor-disk
+  uid: ed126cc8-9473-4aa6-9e69-4d2ae8454a41
+spec:
+  pools:
+  - dataRaidGroups:
+    - blockDevices:
+      - blockDeviceName: blockdevice-8a5b69d8a2b23276f8daeac3c8179f9d
+      - blockDeviceName: blockdevice-e5a1c3c1b66c864588a66d0a7ff8ca58
+    nodeSelector:
+      kubernetes.io/hostname: ip-10-0-6-143.ec2.internal
+    poolConfig:
+      compression: "off"
+      dataRaidGroupType: stripe
+      thickProvision: false
+  - dataRaidGroups:
+    - blockDevices:
+      - blockDeviceName: blockdevice-c21bc3b79a98c7e8508f47558cc94f36
+    nodeSelector:
+      kubernetes.io/hostname: ip-10-0-8-190.ec2.internal
+    poolConfig:
+      compression: "off"
+      dataRaidGroupType: stripe
+      thickProvision: false
+status:
+  conditions:
+  - lastTransitionTime: "2020-08-02T09:25:58Z"
+    lastUpdateTime: "2020-08-02T09:25:58Z"
+    message: Pool manager(s) have minimum available pod
+    reason: MinimumPoolManagersAvailable
+    status: "True"
+    type: PoolManagerAvailable
+  desiredInstances: 3
+  healthyInstances: 3
+  provisionedInstances: 3
+versionDetails:
+  desired: 2.0.0-ee
+  status:
+    current: 2.0.0-ee
+    dependentsUpgraded: true
+    lastUpdateTime: "2020-09-23T17:23:54Z"
+    state: Reconciled
