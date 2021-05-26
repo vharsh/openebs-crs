@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: openebs.io/local
+  creationTimestamp: "2021-01-25T13:34:23Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  labels:
+    openebs.io/cas-type: local-hostpath
+  name: pvc-991022ee-ad78-4ac1-bf41-0cf70bee319e
+  resourceVersion: "163526543"
+  selfLink: /api/v1/persistentvolumes/pvc-991022ee-ad78-4ac1-bf41-0cf70bee319e
+  uid: e1ee5927-7faa-4afc-b75e-d5afe2ba657c
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 5G
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: local-hostpath-pvc
+    namespace: default
+    resourceVersion: "163526495"
+    uid: 991022ee-ad78-4ac1-bf41-0cf70bee319e
+  local:
+    fsType: ""
+    path: /var/openebs/local/pvc-991022ee-ad78-4ac1-bf41-0cf70bee319e
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - minikube-4
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: openebs-hostpath
+  volumeMode: Filesystem
+status:
+  phase: Bound
